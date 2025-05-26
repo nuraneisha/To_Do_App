@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To-Do App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header-container">
+        <h1>To-Do App</h1>
+        <img src="todo.jpg" alt="Calendar Icon" class="todo-icon">
+      </div>
+
+      <!-- Filter Container -->
+      <div class="filter-container">
+        <!-- Filter by User ID Dropdown -->
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Filter User by ID</button>
+          <div id="myDropdown" class="dropdown-content"></div>
+        </div>
+
+        <!-- Filter by Priority Buttons -->
+        <div class="priority-buttons">
+          <a href="#" onclick="filterByPriority('Low')" class="priority-filter" style="background-color:lightgreen;">Low</a>
+          <a href="#" onclick="filterByPriority('Medium')" class="priority-filter" style="background-color:orange;">Medium</a>
+          <a href="#" onclick="filterByPriority('High')" class="priority-filter" style="background-color:tomato;">High</a>
+          <a href="#" onclick="displayList()" class="priority-filter" style="background-color:gray;">Show All</a>
+        </div>
+      </div>
+
+      <!-- To-Do Table -->
+      <table id="todo-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
